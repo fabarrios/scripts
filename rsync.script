@@ -18,5 +18,5 @@ cat leviathan-rsync-key.pub >> authorized_keys
 # Edit validate-rsync
 vi vlidate-rsync  #copy in /Users/barrios/cron
 
-# now test the no passed connection
+# now test the no passwd connection
 rsync -avz -e "ssh -i /Users/barrios/cron/leviathan-rsync-key" barrios@drobo02:/mnt/DroboFS/home/barrios/Backups/Test /Users/barrios
