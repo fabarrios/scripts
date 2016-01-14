@@ -2,4 +2,4 @@ To execute a crontab shell to rsync on the Drobo02 we have
 written a script rsync-OnDrobo02 and theline to route the
 output on the log file rsync-OnDrobo02.log is:
 
-0 4 * * * /bin/sh /Users/barrios/cron/rsync-OnDrobo02 2>&1 >/Users/barrios/cron/rsync-OnDrobo02.log
+0 4 * * * /bin/sh /Users/barrios/cron/rsync-OnDrobo02 2>&1 >>/Users/barrios/cron/rsync-OnDrobo02.log
