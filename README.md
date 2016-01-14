@@ -1,6 +1,6 @@
 # scripts
 # Some rsync scripts that are tested and working
 
-# The rsync backup of the data files to the Drobo system, using the ideas and instrucions in http://troy.jdmz.net/rsync/index.html with rsync and ssh with no passwd.
+# An rsync backup of the data files at my MacOS system to a local Drobo system, using the ideas and instrucions in http://troy.jdmz.net/rsync/index.html using rsync and ssh with no passwd.
 
-# On the Drobo there is a rsync installed from https://github.com/droboports/rsync
+# The local Drobo is running a rsync installed from https://github.com/droboports/rsync
