@@ -1,0 +1,22 @@
+# Script for syncing
+# for no passwd from Leviathan to Drobo02, local
+
+# first generate keys on /Users/barrios/cron
+ssh-keygen -t rsa -b 2048 -f /Users/barrios/cron/leviathan-rsync-key
+
+# copy the pub key to the Drobo02 at the barrios account
+scp /Users/barrios/cron/leviathan-rsync-key.pub barrios@drobo02:/mnt/DroboFS/home/barrios
+
+# prepare and secure the pub key at the Drobo02
+# ssh to barrios@drobo02
+if [ ! -d .ssh ]; then mkdir .ssh ; chmod 700 .ssh ; fi
+mv leviathan-rsync-key.pub .ssh/
+cd .ssh/
+if [ ! -f authorized_keys ]; then touch authorized_keys ; chmod 600 authorized_keys ; fi
+cat leviathan-rsync-key.pub >> authorized_keys
+
+# Edit validate-rsync
+vi vlidate-rsync  #copy in /Users/barrios/cron
+
+# now test the no passed connection
+rsync -avz -e "ssh -i /Users/barrios/cron/leviathan-rsync-key" barrios@drobo02:/mnt/DroboFS/home/barrios/Backups/Test /Users/barrios

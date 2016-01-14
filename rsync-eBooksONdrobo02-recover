@@ -1,0 +1,11 @@
+#!/bin/sh
+
+RSYNC=/usr/bin/rsync 
+SSH=/usr/bin/ssh 
+KEY=/Users/barrios/cron/leviathan-rsync-key 
+RUSER=barrios 
+RHOST=drobo02 
+RPATH=/mnt/DroboFS/home/barrios/Backups 
+LPATH=/Volumes/MacData/Fdo/eBooks
+
+$RSYNC -avz -e "$SSH -i $KEY" $RUSER@$RHOST:$RPATH $LPATH

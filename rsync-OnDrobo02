@@ -1,0 +1,51 @@
+#!/bin/sh
+
+RSYNC=/usr/bin/rsync 
+SSH=/usr/bin/ssh 
+KEY=/Users/barrios/cron/leviathan-rsync-key 
+RUSER=barrios 
+RHOST=drobo02 
+LCRONPATH=/Users/barrios/cron
+
+echo "Data directory backup on Drobo02"
+echo "rsync started on" `date`
+
+# rsync-AzaleaONdrobo02-backup
+echo "Backing up Azalea directory"
+$LCRONPATH/rsync-AzaleaONdrobo02-backup
+
+# rsync-BrandsONdrobo02-backup
+echo "Backing up Brands directory"
+$LCRONPATH/rsync-BrandsONdrobo02-backup
+
+# rsync-ClubMedONdrobo02-backup
+echo "Backing up ClubMed directory"
+$LCRONPATH/rsync-ClubMedONdrobo02-backup
+
+# rsync-EtolONdrobo02-backup
+echo "Backing up Etologos directory"
+$LCRONPATH/rsync-EtolONdrobo02-backup
+
+# rsync-HypnoticONdrobo02-backup
+echo "Backing up Hypnotic directory"
+$LCRONPATH/rsync-HypnoticONdrobo02-backup
+
+# rsync-PsicRestONdrobo02-backup
+echo "Backing up PsicRest directory"
+$LCRONPATH/rsync-PsicRestONdrobo02-backup
+
+# rsync-RiesgoONdrobo02-backup
+echo "Backing up ReisgoDeterCogmitivo directory"
+$LCRONPATH/rsync-RiesgoONdrobo02-backup
+
+# rsync-VBMONdrobo02-backup
+echo "Backing up VBM directory"
+$LCRONPATH/rsync-VBMONdrobo02-backup
+
+# rsync-eBooksONdrobo02-backup
+echo "Backing up eBooks directory"
+$LCRONPATH/rsync-eBooksONdrobo02-backup
+
+echo "rsync ended on" `date`
+
+# #### End bacup on Drobo02 using rsync

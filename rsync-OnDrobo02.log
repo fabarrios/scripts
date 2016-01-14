@@ -1,0 +1,12 @@
+Data directory backup on Drobo02
+rsync started on Thu Jan 14 04:00:01 CST 2016
+Backing up Azalea directory
+Backing up Brands directory
+Backing up ClubMed directory
+Backing up Etologos directory
+Backing up Hypnotic directory
+Backing up PsicRest directory
+Backing up ReisgoDeterCogmitivo directory
+Backing up VBM directory
+Backing up eBooks directory
+rsync ended on Thu Jan 14 05:48:57 CST 2016
