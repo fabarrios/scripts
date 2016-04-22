@@ -1,0 +1,16 @@
+#!/bin/sh
+# This recover process can be used to recober from the
+# rsync backup of the Xnat server to the local disck
+# to construct a tar file as a possible import to a different 
+# Xnat database.
+
+RSYNC=/usr/bin/rsync 
+SSH=/usr/bin/ssh 
+KEY=/Users/barrios/cron/leviathan-rsync-key 
+RUSER=xnat 
+RHOST=drobo02 
+# RPATH=/mnt/DroboFS/home/barrios/Backups/PsicRest
+RPATH=/mnt/DroboFS/home/xnat/backups/XNAT-DB/archive/psicrest
+LPATH=/Volumes/MacData/Fdo/Transf
+
+$RSYNC -avz -e "$SSH -i $KEY" $RUSER@$RHOST:$RPATH $LPATH
