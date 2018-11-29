@@ -1,0 +1,12 @@
+#!/bin/sh
+
+RSYNC=/usr/bin/rsync 
+SSH=/usr/bin/ssh 
+KEY=/Users/barrios/cron/leviathan-rsync-key 
+RUSER=barrios 
+RHOST=drobo01
+RPATH=/mnt/DroboFS/home/barrios/Backups
+LPATH=/Users/barrios/fMRI
+
+# Interactive process, with password typed by the user
+$RSYNC -ahz $LPATH $RUSER@$RHOST:$RPATH
