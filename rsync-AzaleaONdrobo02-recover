@@ -6,6 +6,6 @@ KEY=/Users/barrios/cron/leviathan-rsync-key
 RUSER=barrios 
 RHOST=drobo02 
 RPATH=/mnt/DroboFS/home/barrios/Backups/Azalea 
-LPATH=/Volumes/MacData/Fdo
+LPATH=/Volumes/Data01/Fdo
 
 $RSYNC -avz -e "$SSH -i $KEY" $RUSER@$RHOST:$RPATH $LPATH
