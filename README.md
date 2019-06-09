@@ -5,7 +5,7 @@
 
 # The local Drobo is running a rsync installed from https://github.com/droboports/rsync
 #
-# To send a Dobo, which has a limited CPU power, from workstation rsync should go with compression 
+# To send to a Drobo, which has a limited CPU power, from workstation rsync should go with compression 
 # rsync -ahz [files]
-# to recover from Drobo it works better to do it without compression
+# to recover from a Drobo it works better to do it without compression
 # rsync -ah [files]
